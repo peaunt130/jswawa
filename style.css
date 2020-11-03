@@ -1,0 +1,50 @@
+body {
+background-color: linen;
+color:blue
+}
+h1 {
+margin-left: 40px;
+} 
+title{
+text-align:center;
+color:red;
+font-size:large;
+font-weight:bold;
+}
+.top{
+height:30%;
+}
+.bottom{
+height:70%;
+width:100%;
+}
+left{
+width:20%;
+float:left;
+}
+right{
+width:60%;
+float:left;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+  background-color:yellow;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+  background-color:white;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+ 
+/* selected link */
+a:active {
+  color: blue;
+}
