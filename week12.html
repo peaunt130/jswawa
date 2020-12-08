@@ -1,0 +1,36 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+    var counter=0
+      function pudding(){
+        if(counter % 2){
+          img1.src="img/x.png"
+        }else{
+          img1.src="img/o.png"
+        }
+        counter=counter+1;
+      }
+      function reset(){
+        clearInterval(handle)
+        console.log("你點擊到幾次:"+ hitcount)
+      }
+      function restart(){
+        handle=setInterval(pudding,2020)
+      }
+      var hitcount=0;
+      function hit(e){
+        
+        if(e.src="file:///C:/temp/jswawa/img/o.png"){
+          hitcount=hitcount+1
+        }
+      }
+      
+    </script>
+    <img id="img1" src="img/o.png" style="height:60px；wide=60px" onclick="hit(this)">
+    <br/>
+    <input type="button" value="start" onclick="restart()">
+    <input type="button" value="game over" onclick="reset()">
+  </body>
+  
+</html>
