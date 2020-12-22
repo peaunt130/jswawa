@@ -1,28 +1,41 @@
 <html>
-  <head></head>
+  <head>
+    <style>
+   .hit {
+        /*border: solid blue;*/ 
+        border-color: blue;
+        border-style: solid;
+        border-width: 10px;
+      }
+    </style>
+  </head>
   <body>
     <script>
     var counter=0
+    var counter=0
+    
       function pudding(){
-        if(counter % 2){
+        if(Math.random()<=0.5){
           img1.src="img/x.png"
         }else{
           img1.src="img/o.png"
+          counter=counter+1;
         }
-        counter=counter+1;
+        img1.className = ""
       }
       function reset(){
         clearInterval(handle)
-        console.log("你點擊到幾次:"+ hitcount)
+        console.log("你點擊到幾次:"+ hitcount +",總共" + counter)
       }
       function restart(){
-        handle=setInterval(pudding,2020)
+        handle=setInterval(pudding,1000)
       }
       var hitcount=0;
       function hit(e){
         
         if(e.src="file:///C:/temp/jswawa/img/o.png"){
           hitcount=hitcount+1
+          e.className= ""
         }
       }
       
